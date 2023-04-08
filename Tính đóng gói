@@ -1,3 +1,4 @@
+//P1
 function Myclass()
 {
     var m_data = 5;               var m_text="Hello World";
@@ -16,3 +17,38 @@ myClassObj1.ShowData();
 myClassObj1.ShowText();
 myClassObj2.ShowData();
 myClassObj2.ShowText();
+
+
+//P2
+function Myclass()
+{
+    this.myData=5;
+    this.myString = "Hello World";
+    this.ShowData = DisplayData;
+    this.ShowString = DisplayString;
+}
+function DisplayData() { alert(this.myData); }
+function DisplayString(){ alert(this.myString); }
+var myClassObj1 = new Myclass();
+var myClassObj2 = new Myclass();
+myClassObj1.myData = 10;        myClassObj1.myString="Obj: Hello World";   
+myClassObj2.myData = 20;        myClassObj2.myString="Obj2: Hello World";
+myClassObj1.ShowData();
+myClassObj1.ShowString();
+myClassObj2.ShowData();
+
+
+//P3
+function Myclass()
+{
+    this.myData=5;
+    this.myString = "Hello World";
+}
+var myClassObj1 = new Myclass();
+var myClassObj2 = new Myclass();
+myClassObj1.myData = 10;        myClassObj1.myString="Obj: Hello World";   
+myClassObj2.myData = 20;        myClassObj2.myString="Obj2: Hello World";
+alert( myClassObj1.myData);
+alert( myClassObj1.myString);
+alert(myClassObj2.myData);
+alert(myClassObj2.myString);
