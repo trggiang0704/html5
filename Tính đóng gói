@@ -1,0 +1,18 @@
+function Myclass()
+{
+    var m_data = 5;               var m_text="Hello World";
+    this.ShowData = DisplayData;  this.SetText = SetText;
+    this.SetData = SetData;       this.ShowText= DisplayText;  
+
+function DisplayData()        {alert(m_data); }
+function DisplayText()        {alert(m_text); return; }
+function SetData(myVal)       {m_data = myVal; }
+function SetText(myText)      {m_text= myText; }
+}
+var myClassObj1 = new Myclass();
+var myClassObj2 = new Myclass();
+myClassObj1.SetData(10); myClassObj1.myString="Obj1:HelloWorld"; myClassObj2.SetData(20); myClassObj2.myString="Obj2:HelloWorld";
+myClassObj1.ShowData();
+myClassObj1.ShowText();
+myClassObj2.ShowData();
+myClassObj2.ShowText();
